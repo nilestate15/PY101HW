@@ -1,0 +1,57 @@
+#HW 3
+#Niles Tate
+
+#Problem 1
+#Define variable
+Mystring = "Hello World" #3
+
+#Statement/If variable is an integer or string
+if type(Mystring) == str:
+    print("It's a string")
+elif type(Mystring) == int:
+    print("It's an integer")
+else:
+    print("Error")
+#------------------------------------------------------------
+#Problem 2
+#Dictionary
+dict = {'aa': 11, 'cc': 33, 'LESS Than': -55, 'bb': 22}
+#Make list/runs through lists and pulls value bigger than zero
+dict_keys = [x[0] for x in dict.items() if x[1] > 0]
+print(dict_keys)
+#--------------------------------------------------------------
+#Problem 3
+#Make list from 0-9
+num = range(10)
+#If number is even put into variable
+even_num = [x for x in num if x % 2 == 0]
+print(even_num)
+#----------------------------------------------------------------
+#Problem 4
+#Two lists
+color = ["red", "black", "yellow", "grey"]
+item = ["hoodie", "shirt", "shorts", "pants"]
+#Iterates through two lists for combinations
+item_select = [(x, y) for x in color for y in item]
+print(item_select)
+#------------------------------------------------------------------
+#Problem 5
+#set counter
+counter = 0
+#set statement/count up to 5 starting at 0
+while counter < 5:
+    counter += 1
+    if counter > 5:
+        break
+    print(counter)
+#-------------------------------------------------------------------
+#Problem 6
+#Set couter
+counter = 0
+#set statement/count up to 10 starting at 0 and print even
+while count < 10:
+    counter += 1
+    if counter % 2 != 0:
+        continue
+    print(counter)
+    

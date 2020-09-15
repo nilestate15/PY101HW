@@ -1,0 +1,31 @@
+#HW 4
+#Niles Tate
+
+#Problem 1
+#Function definition
+def write(list):
+    print("Input: ",list)
+    print("Number of items on list: " + str(list))
+    return list
+#Call function and Input
+write(10)
+#-------------------------------------------------------------
+#Problem 2
+#Function definition two inputs
+def clothesinfo(color, piece):
+    "What are you looking for today?"
+    print("Color: ", color)
+    print("Piece: ", piece)
+    return
+#Call function and Input
+clothesinfo(color = "green", piece = "sweatshirt")
+#-------------------------------------------------------------
+#Problem 3
+#Define keyword function
+def candy(**favtypes):
+    print("Favorite Candy: ", favtypes)
+#Input key and value
+candy(fav1 = "Crunch Bar", fav2 = "Reeses", fav3 = "Snickers")
+#--------------------------------------------------------------
+#Problem 4
+#In python script file called HW4_Problem4.py

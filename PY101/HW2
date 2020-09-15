@@ -1,0 +1,68 @@
+#HW 2 Niles Tate
+
+#1 Lists
+
+#Empty list
+Groceries = []
+
+#Append 4 strings
+mlk = "milk"
+egs = "eggs"
+chz = "cheese"
+brd = "bread"
+
+Groceries.append(mlk)
+Groceries.append(egs)
+Groceries.append(chz)
+Groceries.append(brd)
+
+print(Groceries)
+
+#Remove Item off end of list
+Groceries.remove(brd)
+
+print(Groceries)
+
+#-----------------------------------------------------------------
+
+#2 Dictionary
+
+#variables containing strings
+ranger1 = "Red Ranger"
+ranger2 = "Jason Scott"
+
+#dictionary w/ variables and literal strings
+power_rang = {ranger1: ranger2, "Black Ranger": "Zach Taylor"}
+
+print(power_rang)
+
+#-----------------------------------------------------------------
+
+#3 Strings
+
+print("Rained on ground harderns")
+print('Day by day to see a better day')
+print("Mom always told me 'Do not ask for permission, ask for forgiveness.'")
+
+#4 String that spans over multiple line
+print("Young full of running \nTell me where's that taking me? \nJust a great figure eight or a tiny infinity")
+
+#5 Using Join Operation
+artists = []
+
+artists.append("Brent Faiyaz")
+artists.append("Omar Apollo")
+artists.append("Matt Champion")
+artists.append("boy pablo")
+
+artists_sep = ":".join(artists)
+
+print(artists_sep)
+
+#6 String formatting (Help Received: https://realpython.com/python-f-strings/)
+first = "Niles"
+last = "Tate"
+
+name = "{},{}".format(first, last)
+
+print(name)
