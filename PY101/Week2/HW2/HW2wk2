@@ -1,0 +1,57 @@
+#HW2 Week 2
+#Niles Tate
+#GitHub: https://github.com/nilestate15/PY101HW
+
+#Problem 1
+import numpy as np
+#Make an array from 16-100000 going by 4
+array = np.arange(16, 100000, 4)
+#Convert array into 2083 x 12 array
+fixarray = array.reshape(2083,12)
+#Print first 3 rows
+print(fixarray[:3,:])
+#Print last 3 rows
+print(fixarray[-3:,:])
+#------------------------------------------------------------------------
+#Problem 2
+import numpy as np
+bballarray = np.array([4,15,2])
+fballarray = np.array([46,41,9])
+#Stack two arrays vertically on each other
+jointarray = np.vstack([bballarray,fballarray])
+#Gives a type to array
+jointarray = jointarray.astype([("type1", "int8"), ("type2", "float"), ("type3", "float32")])
+print(jointarray["type2"])
+print(jointarray[0])
+#--------------------------------------------------------------------------
+#Problem 3
+import numpy as np
+#Array of ones in int form
+A = np.ones((5), dtype=int)
+#Take slice of A
+B = A[0:2]
+#Mulitply B array by 5
+multB = np.multiply(B,5.0)
+print(A)
+print(B)
+print(multB)
+#Multiply B array by 2 to change B
+B[0:] = np.multiply(B,2.0)
+print(B)
+print(A)
+#---------------------------------------------------------------------------
+#Problem 4
+import numpy as np
+#Array of ones in unicode form
+A = np.ones((5), dtype='U5')
+#Take slice of A
+B = A[0:2]
+#Mulitply B array by 5 (prints 1s 5 times)
+multB = np.char.multiply(B,5)
+print(A)
+print(B)
+print(multB)
+#Multiply B array by 2 to change B
+B[0:] = np.char.multiply(B,2)
+print(B)
+print(A)
