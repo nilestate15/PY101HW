@@ -1,0 +1,22 @@
+#HW3 Week 2
+#Niles Tate
+
+#Problem 1
+#np.transpose() mirrors the image over an axis(x and y axis are swapped) while
+#np.rot() simply rotates that image a certain degree.
+#------------------------------------------------------------------------------
+#Problem 2
+filenm = "/opt/minconda3/envs/PY101/Week2/HW3/ANT.png"
+img = imread(filenm) ## Note we do not have to close this
+img.shape(200,200,4) Look an alpha channel
+# Lets view it But rotated
+A = np.transpose(img, (1,0,2)).copy()
+B = np.rot90(img).copy() ## We need to copy() here if we want a new object
+plt.figure("A")
+plt.imshow(A) #Make an image plot object
+plt.figure("B")
+plt.imshow(B) #Make an image plot object
+plt.figure("Ant Logo")
+plt.imshow(img)
+plt.show() # Display it to screen
+plt.close() # Make sure everything is closed

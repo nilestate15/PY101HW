@@ -1,0 +1,33 @@
+#HW3 Week 2
+#Niles Tate
+#HR:https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_image_display/py_image_display.html
+#HR:Past python code from Undergrad
+
+#Problem 1
+#np.transpose() mirrors the image over an axis(x and y axis are swapped) while
+#np.rot() simply rotates that image a certain degree.
+#------------------------------------------------------------------------------
+#Problem 2
+import cv2
+import numpy as np
+#File location of picture
+filenm = "/opt/miniconda3/envs/PY101/Week2/HW3/ANT.png"
+#Reads in image
+img = cv2.imread(filenm)
+#Prints shape of image/array
+print(np.shape(img))#Look an alpha channel
+#Transpose image
+A = np.transpose(img, (1,0,2)).copy()
+#Rotates image
+B = np.rot90(img).copy() ## We need to copy() here if we want a new object
+#Put images into variable for loop
+imgs = (img, A, B)
+for i in imgs:
+    #Shows image
+    cv2.imshow("",i)
+    #Press any key to go to next image
+    cv2.waitKey(0)
+#------------------------------------------------------------------------------
+#Problem 3
+#importing numpy = np
+#importing pandas = pd
