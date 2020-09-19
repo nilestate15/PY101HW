@@ -7,7 +7,7 @@
 #np.transpose() mirrors the image over an axis(x and y axis are swapped) while
 #np.rot() simply rotates that image a certain degree.
 #------------------------------------------------------------------------------
-#Problem 2
+#Problem 2 (.py file in PY101 repo)
 import cv2
 import numpy as np
 #File location of picture
