@@ -1,0 +1,35 @@
+HW2 Week 3
+#Niles Tate
+HR: matplotlib library/website
+
+#Problem 1
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Array
+t = np.arange(0.,5.,0.2)
+
+#plot full array
+plt.plot(t, linestyle='--', color='red')
+#plot markers every 2nd point
+plt.plot(t, ' bs', markevery = 2)
+#plot marker every 5th point
+plt.plot(t, ' g^', markevery = 5)
+plt.show()
+#--------------------------------------------------------------------------
+#Problem 2
+import numpy as np
+import matplotlib.pyplot as plt
+#data and point colors
+data = {'x': np.arange(50),
+        'mycolors': np.random.randint(0, 50, 50),
+        'd': np.random.randn(50)}
+#data
+data['y'] = data['x'] + 10 * np.random.randn(50)
+data['scaled'] = np.abs(data['d']) * 100
+
+#plot as scatter
+plt.scatter('x', 'y', c='mycolors', s='scaled', data=data)
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
